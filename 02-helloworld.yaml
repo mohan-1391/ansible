@@ -1,4 +1,4 @@
--name: hello
+- name: hello
   hosts: web
   tasks:
   - name: hello ani
