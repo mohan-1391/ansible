@@ -1,12 +1,13 @@
-- name: 
-  hosts: 54.175.94.129
-  before: yes
-  tasks:
-  - name: install nginx
-    ansible.builtin.package:
-     name: nginx
-     state: present
-  - name: nginx start
-    ansible.builtin.service:
-     name: nginx
-     state: started
+- name: "install"
+  block:
+   hosts: 54.175.94.129
+   before: yes
+   tasks:
+   - name: install nginx
+     ansible.builtin.package:
+      name: nginx
+      state: present
+   - name: nginx start
+     ansible.builtin.service:
+      name: nginx
+      state: started
