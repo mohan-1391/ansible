@@ -1,14 +1,14 @@
-- name: install and run ngnix
+- name: install and run nginx
   hosts: web
   before: yes
   tasks:
-  - name: install ngnix
+  - name: install nginx
     ansible.builtin.package:
-     name: ngnix
+     name: nginx
      state: present
-  - name: ngnix start
+  - name: nginx start
     ansible.builtin.service:
-     name: ngnix
-     state:started
+     name: nginx
+     state: started
 
 
